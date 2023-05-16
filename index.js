@@ -14,7 +14,7 @@ const conn = mysql.createConnection({
 host: 'localhost',
 user: 'root',
 password: '',
-database: 'keuangan'
+database: 'crud_db'
 });
 //connect ke database
 conn.connect((err) =>{
