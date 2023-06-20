@@ -1,16 +1,15 @@
 <?php
-
 namespace App\Models;
 
 use CodeIgniter\Model;
 
 class GenreModel extends Model
 {
-    protected $table            = 'genre';   // Nama table yang ada di database
-    protected $primaryKey       = 'id';     // Nama kolom yang menjadi primary key
-    protected $useAutoIncrement = true;     // Beri nilai true jika terdapat autoincrement
-    protected $allowFields      = [];       // Digunakan untuk menentukan kolom mana saja yang dapat kita insert data
 
+    protected $table ='genre';
+    protected $primaryKey ='id';
+    protected $useAutoIncrement = true;
+    protected $allowField =[];
 
 
    public function getGenre()
@@ -18,15 +17,28 @@ class GenreModel extends Model
 
     $data =[
         [
-            "name_genre" => "action",
-            "create_at" => "",
-            "updatee_at" => "",
+            "nama_genre" => "horor",
+            "created_at" => "2023-06-13 14:01:42",
+            "update_at" => "2023-06-13 14:01:42",
         ],
         [ 
-            "name_genre" => "action",
-            "create_at" => "",
-            "updatee_at" => "",
-        ]
+            "nama_genre" => "Action",
+            "created_at" => "2023-06-13 14:01:42",
+            "update_at" => "2023-06-13 14:01:42",
+        ],
+        [ 
+            "nama_genre" => "Romantis",
+            "created_at" => "2023-06-13 16:30:25",
+            "update_at" => "2023-06-13 16:30:25",
+        
+        ],
+        [ 
+            "nama_genre" => "Comedy",
+            "created_at" => "2023-06-13 16:30:25",
+            "update_at" => "2023-06-13 16:30:25",
+        
+        ],
+
         ];
 
     return $data;

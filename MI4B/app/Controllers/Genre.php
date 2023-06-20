@@ -18,36 +18,36 @@ class Genre extends BaseController
          //step 4 memanggil properti film
          $this->genre = new GenreModel();
      }
-
-    public function index()
+     public function index()
     {
         // dd($this->genre->getGenre());
         $data['data_genre'] = $this->genre->getGenre();
         return view("genre/index", $data);
      }
- 
+     
      public function all()
      {
-         $data['semuagenre'] = $this->genre->getAllDdata();
+         $data['semuagenre'] = $this->genre->getAllJData();
          return view("genre/semuagenre", $data);
      }
- 
-     public function film_by_id()
-     {
-         dd($this->film->getdataByID(1));
-     }
-     public function film_by_genre()
-     {
-         dd($this->film->getDataBy('horror'));
-     }
- 
-     public function film_order()
-     {
-         dd($this->film->getOrderBy());
-     }
- 
-     public function film_Limit_five()
-     {
-         dd($this->film->getLimit());
-     }
- }
+     public function film_by_id(){
+        dd($this->film->getDataByID(1));
+    }
+
+    public function film_by_genre()
+    {
+        dd($this->film->getDataBy("Horor"));
+    }
+
+    public function film_order()
+    {
+        dd($this->film->getOrderBy());
+    }
+
+    public function film_limit_five()
+    {
+        dd($this->film->getLimit());
+    }
+
+
+}

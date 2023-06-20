@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Film</title>
+    <title>Data</title>
 
 <link rel="stylesheet" href="/assest/css/bootstrap.min.css">
 </head>
@@ -34,7 +34,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href= "/about">tentang kami</a>
+          <a class="nav-link" href ="/film">tentang kami</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -45,26 +45,18 @@
   </div>
 </nav>
 
-<div class="container">
+    <?= $this->renderSection('content') ?>
 
-    <div class="row">
-        <?php foreach ($semuafilm as $film) : ?>
-        <div class="col-md-5">
-        <div class="card">
-        <img style="width:150px;"src="/assest/cover/kadek/<?= $film['cover'] ?>" alt="">
-            <div class="card-body">
-                <h5 class="card-title"><?= $film["nama_film"] ?></h5>
-                <p class="card-text"><?= $film["id_genre"] ?> || <?= $film["duration"] ?></p>
-                <a href="#" class="btn btn-info">Detail</a>
-                <a href="#" class="btn btn-success">Update</a>
-                <a href="#" class="btn btn-warning">Delete</a>
+    <div class="container">
+        <!-- <footer class="jumbotron jumbotron-fluid mt-5 mb-0"> -->
+        <footer class="row row-cols-5 py-5 my-5 border-top">
+            <div class="container text-center">anyong haseyo
+                <?= Date('Y') ?> kadek indri wedayani
             </div>
-        </div> 
+        </footer>
     </div>
-    <?php endforeach; ?>
-</div>
 
- <script>sr="/assest/js/bootstrap.min.js"></script>
-            </body>  
+
+</body>
 
 </html>
